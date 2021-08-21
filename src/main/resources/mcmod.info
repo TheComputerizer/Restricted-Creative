@@ -1,0 +1,16 @@
+[
+{
+  "modid": "restrictedcreative",
+  "name": "Restricted Creative",
+  "description": "Restricts creative item duping based on a config file",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["The_Computerizer"],
+  "credits": "The_Computerizer",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
