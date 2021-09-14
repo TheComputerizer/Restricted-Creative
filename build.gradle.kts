@@ -16,8 +16,8 @@ plugins {
     id("wtf.gofancy.fancygradle") version "1.0.0"
 }
 
-version = "1.0"
-group = "mods.thecomputerizer.musictriggers"
+version = "1.2"
+group = "mods.thecomputerizer.restrictedcreative"
 
 minecraft {
     mappings("stable", "39-1.12")
@@ -37,6 +37,7 @@ fancyGradle {
 idea.module.inheritOutputDirs = true
 
 repositories {
+    google()
     mavenCentral()
     curseForge()
     maven {
@@ -52,8 +53,7 @@ repositories {
 dependencies {
     minecraft(group = "net.minecraftforge", name = "forge", version = "1.12.2-14.23.5.2855")
     implementation(fg.deobf(curse(mod = "codechicken-lib", projectId = 242818L, fileId = 2779848L)))
-    compileOnly(fg.deobf(group = "mezz.jei", name = "jei_1.12.2", version = "4.16.1.302", classifier = "api"))
-    runtimeOnly(fg.deobf(group = "mezz.jei", name = "jei_1.12.2", version = "4.16.1.302"))
+    implementation(fg.deobf(group = "mezz.jei", name = "jei_1.12.2", version = "4.16.1.302"))
 }
 
 sourceSets.main {
@@ -62,7 +62,7 @@ sourceSets.main {
 
 tasks {
     withType<Jar> {
-        archiveBaseName.set("music-triggers")
+        archiveBaseName.set("restricted-creative")
         finalizedBy("reobfJar")
 
         manifest {
